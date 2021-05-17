@@ -23,61 +23,61 @@ class Board {
 
     public int checkWinStatus() {
         int hits = 0;
-        if (shipRow == "a") {
+        if (shipRow.equals("a")) {
             for (int idx = 0; idx < 10; ++idx) {
                 if (columnOne == idx && a[columnOne] == 5) ++hits;
                 if (columnTwo == idx && a[columnTwo] == 5) ++hits;
             }
         }
-        if (shipRow == "b") {
+        if (shipRow.equals("b")) {
             for (int idx = 0; idx < 10; ++idx) {
                 if (columnOne == idx && b[columnOne] == 5) ++hits;
                 if (columnTwo == idx && b[columnTwo] == 5) ++hits;
             }
         }
-        if (shipRow == "c") {
+        if (shipRow.equals("c")) {
             for (int idx = 0; idx < 10; ++idx) {
                 if (columnOne == idx && c[columnOne] == 5) ++hits;
                 if (columnTwo == idx && c[columnTwo] == 5) ++hits;
             }
         }
-        if (shipRow == "d") {
+        if (shipRow.equals("d")) {
             for (int idx = 0; idx < 10; ++idx) {
                 if (columnOne == idx && d[columnOne] == 5) ++hits;
                 if (columnTwo == idx && d[columnTwo] == 5) ++hits;
             }
         }
-        if (shipRow == "e") {
+        if (shipRow.equals("e")) {
             for (int idx = 0; idx < 10; ++idx) {
                 if (columnOne == idx && e[columnOne] == 5) ++hits;
                 if (columnTwo == idx && e[columnTwo] == 5) ++hits;
             }
         }
-        if (shipRow == "f") {
+        if (shipRow.equals("f")) {
             for (int idx = 0; idx < 10; ++idx) {
                 if (columnOne == idx && f[columnOne] == 5) ++hits;
                 if (columnTwo == idx && f[columnTwo] == 5) ++hits;
             }
         }
-        if (shipRow == "g") {
+        if (shipRow.equals("g")) {
             for (int idx = 0; idx < 10; ++idx) {
                 if (columnOne == idx && g[columnOne] == 5) ++hits;
                 if (columnTwo == idx && g[columnTwo] == 5) ++hits;
             }
         }
-        if (shipRow == "h") {
+        if (shipRow.equals("h")) {
             for (int idx = 0; idx < 10; ++idx) {
                 if (columnOne == idx && h[columnOne] == 5) ++hits;
                 if (columnTwo == idx && h[columnTwo] == 5) ++hits;
             }
         }
-        if (shipRow == "i") {
+        if (shipRow.equals("i")) {
             for (int idx = 0; idx < 10; ++idx) {
                 if (columnOne == idx && i[columnOne] == 5) ++hits;
                 if (columnTwo == idx && i[columnTwo] == 5) ++hits;
             }
         }
-        if (shipRow == "j") {
+        if (shipRow.equals("j")) {
             for (int idx = 0; idx < 10; ++idx) {
                 if (columnOne == idx && j[columnOne] == 5) ++hits;
                 if (columnTwo == idx && j[columnTwo] == 5) ++hits;
@@ -102,37 +102,50 @@ class Board {
                     (column == columnOne) ||
                             (column == columnTwo)
             ) {
-                if (row.equals("a")) {
-                    a[column] = 5;
-                    hit = true;
-                } else if (row.equals("b")) {
-                    b[column] = 5;
-                    hit = true;
-                } else if (row.equals("c")) {
-                    c[column] = 5;
-                    hit = true;
-                } else if (row.equals("d")) {
-                    d[column] = 5;
-                    hit = true;
-                } else if (row.equals("e")) {
-                    e[column] = 5;
-                    hit = true;
-                } else if (row.equals("f")) {
-                    f[column] = 5;
-                    hit = true;
-                } else if (row.equals("g")) {
-                    g[column] = 5;
-                    hit = true;
-                } else if (row.equals("h")) {
-                    h[column] = 5;
-                    hit = true;
-                } else if (row.equals("i")) {
-                    i[column] = 5;
-                    hit = true;
-                } else if (row.equals("j")) {
-                    j[column] = 5;
-                    hit = true;
-                } else o.msg("You did not provide a valid column number");
+                switch (row) {
+                    case "a":
+                        a[column] = 5;
+                        hit = true;
+                        break;
+                    case "b":
+                        b[column] = 5;
+                        hit = true;
+                        break;
+                    case "c":
+                        c[column] = 5;
+                        hit = true;
+                        break;
+                    case "d":
+                        d[column] = 5;
+                        hit = true;
+                        break;
+                    case "e":
+                        e[column] = 5;
+                        hit = true;
+                        break;
+                    case "f":
+                        f[column] = 5;
+                        hit = true;
+                        break;
+                    case "g":
+                        g[column] = 5;
+                        hit = true;
+                        break;
+                    case "h":
+                        h[column] = 5;
+                        hit = true;
+                        break;
+                    case "i":
+                        i[column] = 5;
+                        hit = true;
+                        break;
+                    case "j":
+                        j[column] = 5;
+                        hit = true;
+                        break;
+                    default:
+                        o.msg("You did not provide a valid column number");
+                }
             }
         }
         if ((row.equals("a")) && column <= 9) {
@@ -165,7 +178,7 @@ class Board {
         if ((row.equals("j")) && column <= 9) {
             j[column] = 1;
         }
-        if (hit == false) o.msg("That was a MISS!");
+        if (!hit) o.msg("That was a MISS!");
         else o.msg("That was a HIT!!! uh oh!!");
     }
 
