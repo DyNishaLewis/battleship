@@ -23,66 +23,70 @@ class Board {
 
     public int checkWinStatus() {
         int hits = 0;
-        if (shipRow.equals("a")) {
-            for (int idx = 0; idx < 10; ++idx) {
-                if (columnOne == idx && a[columnOne] == 5) ++hits;
-                if (columnTwo == idx && a[columnTwo] == 5) ++hits;
-            }
+        switch (shipRow) {
+            case "a":
+                for (int idx = 0; idx < 10; ++idx) {
+                    if (columnOne == idx && a[columnOne] == 5) ++hits;
+                    if (columnTwo == idx && a[columnTwo] == 5) ++hits;
+                }
+                break;
+            case "b":
+                for (int idx = 0; idx < 10; ++idx) {
+                    if (columnOne == idx && b[columnOne] == 5) ++hits;
+                    if (columnTwo == idx && b[columnTwo] == 5) ++hits;
+                }
+                break;
+            case "c":
+                for (int idx = 0; idx < 10; ++idx) {
+                    if (columnOne == idx && c[columnOne] == 5) ++hits;
+                    if (columnTwo == idx && c[columnTwo] == 5) ++hits;
+                }
+                break;
+            case "d":
+                for (int idx = 0; idx < 10; ++idx) {
+                    if (columnOne == idx && d[columnOne] == 5) ++hits;
+                    if (columnTwo == idx && d[columnTwo] == 5) ++hits;
+                }
+                break;
+            case "e":
+                for (int idx = 0; idx < 10; ++idx) {
+                    if (columnOne == idx && e[columnOne] == 5) ++hits;
+                    if (columnTwo == idx && e[columnTwo] == 5) ++hits;
+                }
+                break;
+            case "f":
+                for (int idx = 0; idx < 10; ++idx) {
+                    if (columnOne == idx && f[columnOne] == 5) ++hits;
+                    if (columnTwo == idx && f[columnTwo] == 5) ++hits;
+                }
+                break;
+            case "g":
+                for (int idx = 0; idx < 10; ++idx) {
+                    if (columnOne == idx && g[columnOne] == 5) ++hits;
+                    if (columnTwo == idx && g[columnTwo] == 5) ++hits;
+                }
+                break;
+            case "h":
+                for (int idx = 0; idx < 10; ++idx) {
+                    if (columnOne == idx && h[columnOne] == 5) ++hits;
+                    if (columnTwo == idx && h[columnTwo] == 5) ++hits;
+                }
+                break;
+            case "i":
+                for (int idx = 0; idx < 10; ++idx) {
+                    if (columnOne == idx && i[columnOne] == 5) ++hits;
+                    if (columnTwo == idx && i[columnTwo] == 5) ++hits;
+                }
+                break;
+            case "j":
+                for (int idx = 0; idx < 10; ++idx) {
+                    if (columnOne == idx && j[columnOne] == 5) ++hits;
+                    if (columnTwo == idx && j[columnTwo] == 5) ++hits;
+                }
+                break;
         }
-        if (shipRow.equals("b")) {
-            for (int idx = 0; idx < 10; ++idx) {
-                if (columnOne == idx && b[columnOne] == 5) ++hits;
-                if (columnTwo == idx && b[columnTwo] == 5) ++hits;
-            }
-        }
-        if (shipRow.equals("c")) {
-            for (int idx = 0; idx < 10; ++idx) {
-                if (columnOne == idx && c[columnOne] == 5) ++hits;
-                if (columnTwo == idx && c[columnTwo] == 5) ++hits;
-            }
-        }
-        if (shipRow.equals("d")) {
-            for (int idx = 0; idx < 10; ++idx) {
-                if (columnOne == idx && d[columnOne] == 5) ++hits;
-                if (columnTwo == idx && d[columnTwo] == 5) ++hits;
-            }
-        }
-        if (shipRow.equals("e")) {
-            for (int idx = 0; idx < 10; ++idx) {
-                if (columnOne == idx && e[columnOne] == 5) ++hits;
-                if (columnTwo == idx && e[columnTwo] == 5) ++hits;
-            }
-        }
-        if (shipRow.equals("f")) {
-            for (int idx = 0; idx < 10; ++idx) {
-                if (columnOne == idx && f[columnOne] == 5) ++hits;
-                if (columnTwo == idx && f[columnTwo] == 5) ++hits;
-            }
-        }
-        if (shipRow.equals("g")) {
-            for (int idx = 0; idx < 10; ++idx) {
-                if (columnOne == idx && g[columnOne] == 5) ++hits;
-                if (columnTwo == idx && g[columnTwo] == 5) ++hits;
-            }
-        }
-        if (shipRow.equals("h")) {
-            for (int idx = 0; idx < 10; ++idx) {
-                if (columnOne == idx && h[columnOne] == 5) ++hits;
-                if (columnTwo == idx && h[columnTwo] == 5) ++hits;
-            }
-        }
-        if (shipRow.equals("i")) {
-            for (int idx = 0; idx < 10; ++idx) {
-                if (columnOne == idx && i[columnOne] == 5) ++hits;
-                if (columnTwo == idx && i[columnTwo] == 5) ++hits;
-            }
-        }
-        if (shipRow.equals("j")) {
-            for (int idx = 0; idx < 10; ++idx) {
-                if (columnOne == idx && j[columnOne] == 5) ++hits;
-                if (columnTwo == idx && j[columnTwo] == 5) ++hits;
-            }
-        }
+
+
         String msg = "So far the number of hits you have is: " + hits;
         System.out.println(msg);
         return hits;
@@ -148,36 +152,41 @@ class Board {
                 }
             }
         }
-        if ((row.equals("a")) && column <= 9) {
-            a[column] = 1;
+        if (column <= 9) {
+            switch (row) {
+                case "a":
+                    a[column] = 1;
+                    break;
+                case "b":
+                    b[column] = 1;
+                    break;
+                case "c":
+                    c[column] = 1;
+                    break;
+                case "d":
+                    d[column] = 1;
+                    break;
+                case "e":
+                    e[column] = 1;
+                    break;
+                case "f":
+                    f[column] = 1;
+                    break;
+                case "g":
+                    g[column] = 1;
+                    break;
+                case "h":
+                    h[column] = 1;
+                    break;
+                case "i":
+                    i[column] = 1;
+                    break;
+                case "j":
+                    j[column] = 1;
+                    break;
+            }
         }
-        if ((row.equals("b")) && column <= 9) {
-            b[column] = 1;
-        }
-        if ((row.equals("c")) && column <= 9) {
-            c[column] = 1;
-        }
-        if ((row.equals("d")) && column <= 9) {
-            d[column] = 1;
-        }
-        if ((row.equals("e")) && column <= 9) {
-            e[column] = 1;
-        }
-        if ((row.equals("f")) && column <= 9) {
-            f[column] = 1;
-        }
-        if ((row.equals("g")) && column <= 9) {
-            g[column] = 1;
-        }
-        if ((row.equals("h")) && column <= 9) {
-            h[column] = 1;
-        }
-        if ((row.equals("i")) && column <= 9) {
-            i[column] = 1;
-        }
-        if ((row.equals("j")) && column <= 9) {
-            j[column] = 1;
-        }
+
         if (!hit) o.msg("That was a MISS!");
         else o.msg("That was a HIT!!! uh oh!!");
     }
